@@ -16,7 +16,22 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "dependsOn": [
+                "preprocess"
+            ]
+        },
+        {
+            "label": "preprocess",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                // "-watch",
+                "src/index.scss",
+                "dist/index.css",
+                "--trace"
+            ],
+            "problemMatcher": "$node-sass"
         }
     ]
 }
