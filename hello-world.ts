@@ -1,0 +1,4 @@
+class HelloWorld {
+    x = "";
+    y = "";
+}
