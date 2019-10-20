@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        // "outDir": "../dist/es6/",
+        "outFile": "../dist/vending-machine.js",
+        "sourceMap": true,
+        "noImplicitAny": true
+    }
+}

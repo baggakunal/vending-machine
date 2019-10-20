@@ -8,8 +8,9 @@
             "type": "shell",
             "command": "tsc",
             "args": [
-                "-watch",
-                "hello-world.ts"
+                // "-watch",
+                "-p",
+                "src"
             ],
             "problemMatcher": "$tsc",
             "group": {
