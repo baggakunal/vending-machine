@@ -5,6 +5,6 @@ class Quarter {
     }
 
     public getImageUrl(): string {
-        return 'img/Quarter.png';
+        return "assets/img/Quarter.png";
     }
 }
