@@ -1,78 +1,78 @@
-/// <reference path="./product-category.ts" />
+import * as Categories from "./product-category";
 
-interface Product {
+export interface Product {
     name: string;
     price: number;
-    category?: ProductCategory;
+    category?: Categories.ProductCategory;
 }
 
-class Initial implements Product {
+export class Initial implements Product {
     name: string = "Please select a product";
     price: number = 0;
 }
 
-class CocaCola implements Product {
+export class CocaCola implements Product {
     public name: string = "Coca-Cola";
     public price: number = 2.30;
-    public category: SodaCategory = new SodaCategory();
+    public category: Categories.SodaCategory = new Categories.SodaCategory();
 }
 
-class Fanta implements Product {
+export class Fanta implements Product {
     name: string = "Fanta"
     price = 2
-    category = new SodaCategory()
+    category = new Categories.SodaCategory()
 }
 
-class Sprite implements Product {
+export class Sprite implements Product {
     name: string = "Sprite"
     price = 1.80
-    category = new SodaCategory()
+    category = new Categories.SodaCategory()
 }
 
-class Peanuts implements Product {
+export class Peanuts implements Product {
     name: string = "Peanuts"
     price = 1.50
-    category = new NutsCategory()
+    category = new Categories.NutsCategory()
 }
 
-class Cashews implements Product {
+export class Cashews implements Product {
     name: string = "Cashews"
     price = 2.80
-    category = new NutsCategory()
+    category = new Categories.NutsCategory()
 }
 
-class Plain implements Product {
+export class Plain implements Product {
     name: string = "Plain"
     price = 2
-    category = new ChipsCategory()
+    category = new Categories.ChipsCategory()
 }
 
-class Cheddar implements Product {
+export class Cheddar implements Product {
     name: string = "Cheddar"
     price = 2
-    category = new ChipsCategory()
+    category = new Categories.ChipsCategory()
 }
 
-class Mints implements Product {
+export class Mints implements Product {
     name: string = "Mints"
     price = 1.30
-    category = new CandyCategory()
+    category = new Categories.CandyCategory()
 }
 
-class Gummies implements Product {
+export class Gummies implements Product {
     name: string = "Gummies"
     price = 1.90
-    category = new CandyCategory()
+    category = new Categories.CandyCategory()
 }
 
-class Hersey implements Product {
+export class Hersey implements Product {
     name: string = "Hersey's"
     price = 1.30
-    category = new CandyBarCategory()
+    category = new Categories.CandyBarCategory()
 }
 
-class MilkyWay implements Product {
+export class MilkyWay implements Product {
     name: string = "Milky Way"
     price = 1.80
-    category = new CandyBarCategory()
+    category = new Categories.CandyBarCategory()
 }

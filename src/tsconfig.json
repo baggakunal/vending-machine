@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
         "target": "es5",
-        // "outDir": "../dist/es6/",
-        "outFile": "../dist/vending-machine.js",
+        "outDir": "../dist/es5/",
+        // "outFile": "../dist/vending-machine.js",
+        "module": "amd",
         "sourceMap": true,
         "noImplicitAny": true
     }

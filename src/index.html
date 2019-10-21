@@ -51,7 +51,15 @@
         </div>
 
         <script src="./lib/knockout-3.4.0.js"></script>
-        <script src="../dist/vending-machine.js"></script>
+        <script src="./lib/require-2.3.6.js"></script>
+
+        <script>
+            require(["../dist/es5/vending-machine"], function (machineModule) {
+                var machine = new machineModule.VendingMachine();
+                machine.size = machineModule.VendingMachineSize.medium;
+                ko.applyBindings(machine);
+            });
+        </script>
     </body>
 
 </html>
