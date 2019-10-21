@@ -12,7 +12,7 @@ class Cell {
     public stock: KnockoutObservable<number> = ko.observable(3);
     public sold: KnockoutObservable<boolean> = ko.observable(false);
 
-    constructor(public product: CocaCola) {
+    constructor(public product: Product) {
 
     }
 }
@@ -21,8 +21,8 @@ class VendingMachine {
     cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
     acceptedCoins: Array<Coin> = [new Dime(), new Quarter(), new Half(), new Dollar()];
     paid: KnockoutObservable<number> = ko.observable(0);
-    selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new CocaCola()));
-    canPay = ko.pureComputed(() => this.paid() - this.selectedCell().product.price >= 0);
+    selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new Initial()));
+    canPay = ko.pureComputed(() => this.selectedCell().product.price > 0 && this.paid() - this.selectedCell().product.price >= 0);
 
     set size(givenSize: VendingMachineSize) {
         this.cells([]);

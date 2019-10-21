@@ -1,6 +1,7 @@
 abstract class Coin {
     abstract getImageUrl(): string;
     protected _imgPath: string = "assets/img/";
+
     protected _value: number;
     get value(): number {
         return this._value;
