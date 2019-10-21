@@ -1,53 +1,56 @@
-abstract class Coin {
-    abstract getImageUrl(): string;
-    protected _imgPath: string = "assets/img/";
+namespace Coins {
+    const IMG_PATH: string = "assets/img/";
 
-    protected _value: number;
-    get value(): number {
-        return this._value;
-    };
+    export abstract class Coin {
+        abstract getImageUrl(): string;
 
-    constructor(value: number) {
-        this._value = value;
-    }
-}
+        protected _value: number;
+        get value(): number {
+            return this._value;
+        };
 
-class Dime extends Coin {
-    constructor() {
-        super(0.10);
+        constructor(value: number) {
+            this._value = value;
+        }
     }
 
-    public getImageUrl(): string {
-        return this._imgPath + "Dime.png";
-    }
-}
+    export class Dime extends Coin {
+        constructor() {
+            super(0.10);
+        }
 
-class Quarter extends Coin {
-    constructor() {
-        super(0.25);
-    }
-
-    public getImageUrl(): string {
-        return this._imgPath + "Quarter.png";
-    }
-}
-
-class Half extends Coin {
-    constructor() {
-        super(0.5);
+        public getImageUrl(): string {
+            return IMG_PATH + "Dime.png";
+        }
     }
 
-    public getImageUrl(): string {
-        return this._imgPath + "Half.png";
-    }
-}
+    export class Quarter extends Coin {
+        constructor() {
+            super(0.25);
+        }
 
-class Dollar extends Coin {
-    constructor() {
-        super(1);
+        public getImageUrl(): string {
+            return IMG_PATH + "Quarter.png";
+        }
     }
 
-    public getImageUrl(): string {
-        return this._imgPath + "Dollar.jpg";
+    export class Half extends Coin {
+        constructor() {
+            super(0.5);
+        }
+
+        public getImageUrl(): string {
+            return IMG_PATH + "Half.png";
+        }
+    }
+
+    export class Dollar extends Coin {
+        constructor() {
+            super(1);
+        }
+
+        public getImageUrl(): string {
+            return IMG_PATH + "Dollar.jpg";
+        }
     }
 }
